@@ -158,7 +158,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="font-semibold text-4xl ml-10">
-                  Growth & Monetization Strategy
+                  Growth &amp; Monetization Strategy
                 </div>
                 <div className="grid grid-flow-col ml-10">
                   <div className="mt-6  text-blue-400">Enhance your growth</div>
@@ -186,7 +186,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="font-semibold text-4xl ml-10">
-                  Retention & Engagement
+                  Retention &amp; Engagement
                 </div>
                 <div className="grid grid-flow-col ml-10">
                   <div className="mt-16  text-blue-400"> Grow matrics</div>
@@ -217,7 +217,7 @@ export default function Home() {
                   Product Design
                 </div>
                 <div className="grid grid-flow-col ml-10">
-                  <div className=" mt-20  text-blue-400">Enhance UI & UX</div>
+                  <div className=" mt-20  text-blue-400">Enhance UI &amp; UX</div>
                   <div>
                     <Image
                       src="/icons/arrow.png"
@@ -370,7 +370,7 @@ export default function Home() {
                       />
                     </div>
                     <div className="font-semibold text-2xl ml-10">
-                      Proposals & Ideas
+                      Proposals &amp; Ideas
                     </div>
                     <div className="grid grid-flow-col m-10">
                       <div className="font-normal text-start ">
@@ -416,7 +416,7 @@ export default function Home() {
                       />
                     </div>
                     <div className="font-semibold text-2xl ml-10">
-                      Prototype & Tests
+                      Prototype &amp; Tests
                     </div>
                     <div className="grid grid-flow-col m-10">
                       <div className="font-normal text-start ">
@@ -575,14 +575,14 @@ export default function Home() {
             <div className="grid grid-flow-row">
               <div className=" font-semibold text-xl ">Services</div>
               <h1>Growth stratergy</h1>
-              <h1>Retention & Engagement</h1>
+              <h1>Retention &amp; Engagement</h1>
               <h1>Performance Marketing</h1>
               <h1>App store Optimaization</h1>
             </div>
             <div className="grid grid-flow-row">
               <div className=" font-semibold text-xl ">Others</div>
               <h1>Site map</h1>
-              <h1>Terms & conditions</h1>
+              <h1>Terms &amp; conditions</h1>
               <h1>Privacy Policy</h1>
             </div>
           </div>
