@@ -1,47 +1,51 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <main>
-      <div className="space-y-28">
+      <div className="">
         {/* part 1 */}
         <div className="relative">
           <div className="absolute">
             {/* Navbar */}
             <div className="grid grid-flow-col justify-between w-screen">
-              <div className="p-6">
-                  <Image
-                    src="/images/logo.png"
-                    alt=""
-                    className=""
-                    width={200}
-                    height={200}
-                  />
-              </div>
-              
-                <div className="grid grid-flow-col">
-                  <div className="grid grid-flow-col gap-10 text-xl font-medium place-content-center">
-                    <div className=" font-medium">
-                      Home
-                    </div>
-                    <div className=" font-medium">
-                      Service
-                    </div>
-                    <div className=" font-medium">
-                      Blog
-                    </div>
-                    <div className=" font-medium">
-                      Contact
-                    </div>
-                                </div>
+              {/* logo area */}
+              <motion.div
+                animate={{
+                  scale: [1, 2, 2, 1, 1],
+                  rotate: [0, 0, 270, 270, 0],
+                  borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+                }}
+                className="p-6"
+              >
+                <Image
+                  src="/images/logo.png"
+                  alt=""
+                  className=""
+                  width={200}
+                  height={200}
+                />
+              </motion.div>
+              {/* Home page options  */}
+              <div className="grid grid-flow-col">
+                <div className="grid grid-flow-col space-x-28 text-xl font-medium place-content-center">
+                  <div className=" font-medium">Home</div>
+                  <div className=" font-medium">Service</div>
+                  <div className=" font-medium">Blog</div>
+                  <div className=" font-medium">Contact</div>
                 </div>
-              <div className="h-1 w-1">
               </div>
-             </div>
+              <div className="h-1 w-1"></div>
+            </div>
           </div>
-
-
-          <div className="absolute inset-0 flex justify-center items-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ ease: "linear" }}
+            className="absolute inset-0 flex justify-center items-center"
+          >
             <div className="grid grid-flow-col justify-center ">
               <div className="grid grid-flow-row space-y-10 text-center p-16">
                 <div className="text-xl">WE ARE APPLICA</div>
@@ -49,10 +53,14 @@ export default function Home() {
                   Worlds Leading App Growth Partner
                 </div>
                 <div className="grid grid-flow-col rounded-full bg-white m-96 p-2 items-center place-content-between">
-                  <div className="text-gray-500 text-lg mt-2 ml-2 px-10 py-4">
+                  <div className="text-gray-500 text-lg mt-2 ml-2 px-48 py-2">
                     Type your app name or website
                   </div>
-                  <div className="">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className=""
+                  >
                     <Image
                       src="/icons/search.png"
                       alt=""
@@ -60,7 +68,7 @@ export default function Home() {
                       width={40}
                       height={40}
                     />
-                  </div>
+                  </motion.div>
                 </div>
                 <div className="font-light text-md">
                   {" "}
@@ -68,7 +76,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
           <div>
             <Image
               src="/images/pg1.png"
@@ -94,7 +102,7 @@ export default function Home() {
         </div>
 
         {/* part 3 */}
-        <div className="container mx-auto m-20">
+        <div className="container mx-auto mt-28">
           <div className="grid grid-flow-row space-y-8">
             <div className="font-bold text-5xl grid grid-flow-col justify-start gap-3">
               The Perfect solution for{" "}
@@ -107,37 +115,55 @@ export default function Home() {
             </div>
           </div>
           <div className="grid grid-flow-col justify-center mt-24">
-            <div className=" rounded-2xl w-96 m-6 h-44 bg-white shadow-lg">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className=" rounded-2xl w-96 m-6 h-44 bg-white shadow-lg"
+            >
               <div className="space-y-10 p-10">
                 <div className="text-blue-600 text-5xl font-bold">290</div>
                 <div className=" text-lg">A/B tests conducted</div>
               </div>
-            </div>
-            <div className=" rounded-2xl w-auto m-6 h-44 bg-white shadow-lg">
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className=" rounded-2xl w-auto m-6 h-44 bg-white shadow-lg"
+            >
               <div className="space-y-10 p-10">
                 <div className="text-blue-600 text-5xl font-bold">26.4%</div>
                 <div className=" text-lg">Average 1st-month Revenue growth</div>
               </div>
-            </div>
-            <div className=" rounded-2xl w-96 m-6 h-44 bg-white shadow-lg">
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className=" rounded-2xl w-96 m-6 h-44 bg-white shadow-lg"
+            >
               <div className="space-y-10 p-10">
                 <div className="text-blue-600 text-5xl font-bold">68%</div>
                 <div className=" text-lg">Sucess rate</div>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className="grid grid-flow-col justify-center mt-4">
-            <div className="  bg-blue-800 w-72 py-6 rounded-full shadow-xl  ">
+            <motion.div
+              whileHover={{ scale: 1.2 }}
+              onHoverStart={(e) => {}}
+              onHoverEnd={(e) => {}}
+              whileTap={{ scale: 0.8 }}
+              className="  bg-blue-800 w-72 py-6 rounded-full shadow-xl  "
+            >
               <div className="text-white text-center">
                 Explore Partnership Opportunities
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         {/* part 4 */}
 
         {/* part 5 */}
-        <div className="container mx-auto">
+        <div className="container mx-auto mt-28">
           <div className="grid grid-flow-col justify-center">
             <div className="font-bold text-5xl">Scale Your Business Easily</div>
           </div>
@@ -146,7 +172,11 @@ export default function Home() {
         {/* part 6 */}
         <div className="container mx-auto ">
           <div className="grid grid-cols-3 gap-8">
-            <div className="grid grid-flow-col mt-16">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="grid grid-flow-col mt-16"
+            >
               <div className="bg-white shadow-lg w-96 h-96 rounded-3xl">
                 <div>
                   <Image
@@ -162,7 +192,11 @@ export default function Home() {
                 </div>
                 <div className="grid grid-flow-col ml-10">
                   <div className="mt-6  text-blue-400">Enhance your growth</div>
-                  <div>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    onHoverStart={(e) => {}}
+                    onHoverEnd={(e) => {}}
+                  >
                     <Image
                       src="/icons/arrow.png"
                       alt=""
@@ -170,11 +204,15 @@ export default function Home() {
                       width={30}
                       height={30}
                     />
-                  </div>
+                  </motion.div>
                 </div>
               </div>
-            </div>
-            <div className="grid grid-flow-col mt-16">
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="grid grid-flow-col mt-16"
+            >
               <div className="bg-white shadow-lg w-96 h-96 rounded-3xl">
                 <div>
                   <Image
@@ -190,19 +228,27 @@ export default function Home() {
                 </div>
                 <div className="grid grid-flow-col ml-10">
                   <div className="mt-16  text-blue-400"> Grow matrics</div>
-                  <div>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    onHoverStart={(e) => {}}
+                    onHoverEnd={(e) => {}}
+                  >
                     <Image
                       src="/icons/arrow.png"
                       alt=""
-                      className="m-16"
+                      className=" mt-14"
                       width={30}
                       height={30}
                     />
-                  </div>
+                  </motion.div>
                 </div>
               </div>
-            </div>
-            <div className="grid grid-flow-col mt-16">
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="grid grid-flow-col mt-16"
+            >
               <div className="bg-white shadow-lg w-96 h-96 rounded-3xl">
                 <div>
                   <Image
@@ -217,20 +263,30 @@ export default function Home() {
                   Product Design
                 </div>
                 <div className="grid grid-flow-col ml-10">
-                  <div className=" mt-20  text-blue-400">Enhance UI &amp; UX</div>
-                  <div>
+                  <div className=" mt-20  text-blue-400">
+                    Enhance UI &amp; UX
+                  </div>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    onHoverStart={(e) => {}}
+                    onHoverEnd={(e) => {}}
+                  >
                     <Image
                       src="/icons/arrow.png"
                       alt=""
-                      className="m-24"
+                      className="mt-20 "
                       width={30}
                       height={30}
                     />
-                  </div>
+                  </motion.div>
                 </div>
               </div>
-            </div>
-            <div className="grid grid-flow-col mt-16">
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="grid grid-flow-col mt-16"
+            >
               <div className="bg-white shadow-lg w-96 h-96 rounded-3xl">
                 <div>
                   <Image
@@ -245,20 +301,28 @@ export default function Home() {
                   Performance Marketing
                 </div>
                 <div className="grid grid-flow-col ml-10">
-                  <div className="mt-6  text-blue-400">Improve AI</div>
-                  <div>
+                  <div className="mt-12  text-blue-400">Improve AI</div>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    onHoverStart={(e) => {}}
+                    onHoverEnd={(e) => {}}
+                  >
                     <Image
                       src="/icons/arrow.png"
                       alt=""
-                      className="m-6"
+                      className="m-10"
                       width={30}
                       height={30}
                     />
-                  </div>
+                  </motion.div>
                 </div>
               </div>
-            </div>
-            <div className="grid grid-flow-col mt-16">
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="grid grid-flow-col mt-16"
+            >
               <div className="bg-white shadow-lg w-96 h-96 rounded-3xl">
                 <div>
                   <Image
@@ -273,20 +337,28 @@ export default function Home() {
                   App Store Optimaization
                 </div>
                 <div className="grid grid-flow-col ml-10">
-                  <div className="mt-6  text-blue-400">Boost ratings</div>
-                  <div>
+                  <div className="mt-12  text-blue-400">Boost ratings</div>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    onHoverStart={(e) => {}}
+                    onHoverEnd={(e) => {}}
+                  >
                     <Image
                       src="/icons/arrow.png"
                       alt=""
-                      className="m-6"
+                      className="m-10"
                       width={30}
                       height={30}
                     />
-                  </div>
+                  </motion.div>
                 </div>
               </div>
-            </div>
-            <div className="grid grid-flow-col mt-16">
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="grid grid-flow-col mt-16"
+            >
               <div className="bg-white shadow-lg w-96 h-96 rounded-3xl">
                 <div>
                   <Image
@@ -301,34 +373,42 @@ export default function Home() {
                   Creative Production
                 </div>
                 <div className="grid grid-flow-col ml-10">
-                  <div className="mt-6  text-blue-400">Drive connections</div>
-                  <div>
+                  <div className="mt-12  text-blue-400">Drive connections</div>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    onHoverStart={(e) => {}}
+                    onHoverEnd={(e) => {}}
+                  >
                     <Image
                       src="/icons/arrow.png"
                       alt=""
-                      className="m-6"
+                      className="m-10"
                       width={30}
                       height={30}
                     />
-                  </div>
+                  </motion.div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 
         {/* part 7 */}
-        <div className="container mx-auto mt-24">
+        <div className="container mx-auto mt-28">
           <div className="grid grid-flow-row space-y-10">
             <div className="text-5xl font-bold">
               Grow your Products in five steps
             </div>
             <div className="grid grid-flow-col">
-              <div className="  bg-blue-800 w-72 py-6 rounded-full shadow-xl  ">
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="  bg-blue-800 w-72 py-6 rounded-full shadow-xl  "
+              >
                 <div className="text-white text-center">
                   Lets Start a Projext
                 </div>
-              </div>
+              </motion.div>
             </div>
             <div className=" text-lg">
               Let us nourish your dreams and handle your douts
@@ -336,7 +416,11 @@ export default function Home() {
             <div className="span-row-2">
               <div className="grid grid-cols-3">
                 {/* card 1 */}
-                <div className="grid grid-flow-col mt-16">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="grid grid-flow-col mt-16"
+                >
                   <div className="bg-white shadow-lg w-96 h-fit rounded-3xl">
                     <div>
                       <Image
@@ -356,9 +440,13 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
                 {/* card 2 */}
-                <div className="grid grid-flow-col mt-16">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="grid grid-flow-col mt-16"
+                >
                   <div className="bg-white shadow-lg w-96 h-fit rounded-3xl">
                     <div>
                       <Image
@@ -380,9 +468,13 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
                 {/* card 3 */}
-                <div className="grid grid-flow-col mt-16">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="grid grid-flow-col mt-16"
+                >
                   <div className="bg-white shadow-lg w-96 h-fit rounded-3xl">
                     <div>
                       <Image
@@ -402,9 +494,13 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
                 {/* card 4 */}
-                <div className="grid grid-flow-col mt-16">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="grid grid-flow-col mt-16"
+                >
                   <div className="bg-white shadow-lg w-96 h-fit rounded-3xl">
                     <div>
                       <Image
@@ -426,9 +522,13 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
                 {/* card 5 */}
-                <div className="grid grid-flow-col mt-16">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="grid grid-flow-col mt-16"
+                >
                   <div className="bg-white shadow-lg w-96 h-fit rounded-3xl">
                     <div>
                       <Image
@@ -448,9 +548,13 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
                 {/* card 6 */}
-                <div className="grid grid-flow-col mt-16">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="grid grid-flow-col mt-16"
+                >
                   <div className="bg-white shadow-lg w-96 h-fit rounded-3xl">
                     <div>
                       <Image
@@ -470,7 +574,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -522,7 +626,7 @@ export default function Home() {
         </div>
 
         {/* footer */}
-        <div className=" bg-blue-100 p-28 ">
+        <div className=" bg-blue-100 p-28 mt-28">
           <div className="grid grid-flow-col justify-between">
             {/* logo */}
             <div className="grid grid-flow-row space-y-6">
@@ -536,7 +640,10 @@ export default function Home() {
                 />
               </div>
               <div className="grid grid-flow-col">
-                <div>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
                   <Image
                     src="/icons/insta.png"
                     alt=""
@@ -544,8 +651,11 @@ export default function Home() {
                     width={50}
                     height={50}
                   />
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
                   <Image
                     src="/icons/fb.png"
                     alt=""
@@ -553,8 +663,11 @@ export default function Home() {
                     width={50}
                     height={50}
                   />
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
                   <Image
                     src="/icons/tweet.png"
                     alt=""
@@ -562,7 +675,7 @@ export default function Home() {
                     width={50}
                     height={50}
                   />
-                </div>
+                </motion.div>
               </div>
             </div>
 
