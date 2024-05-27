@@ -4,173 +4,171 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
-      <div className="">
-        {/* part 1 */}
-        <div className="relative">
-          <div className="absolute">
-            {/* Navbar */}
-            <div className="grid grid-flow-col justify-between w-screen">
-              {/* logo area */}
-              <motion.div
-                animate={{
-                  scale: [1, 2, 2, 1, 1],
-                  rotate: [0, 0, 270, 270, 0],
-                  borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-                }}
-                className="p-6"
-              >
-                <Image
-                  src="/images/logo.png"
-                  alt=""
-                  className=""
-                  width={200}
-                  height={200}
-                />
-              </motion.div>
-              {/* Home page options  */}
-              <div className="grid grid-flow-col">
-                <div className="grid grid-flow-col space-x-28 text-xl font-medium place-content-center">
-                  <div className=" font-medium">Home</div>
-                  <div className=" font-medium">Service</div>
-                  <div className=" font-medium">Blog</div>
-                  <div className=" font-medium">Contact</div>
-                </div>
+    <main className="overflow-hidden">
+      {/* Navbar */}
+      <div className="relative">
+        <div className="absolute inset-0">
+          <div className="grid grid-flow-col justify-between w-screen">
+            {/* Logo */}
+            <motion.div
+              animate={{
+                scale: [1, 2, 2, 1, 1],
+                rotate: [0, 0, 270, 270, 0],
+                borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+              }}
+              className="p-6"
+            >
+              <Image
+                src="/images/logo.png"
+                alt="Logo"
+                width={200}
+                height={200}
+              />
+            </motion.div>
+
+            {/* Navigation Links */}
+            <div className="grid grid-flow-col space-x-28 text-xl font-medium place-content-center">
+              <div>Home</div>
+              <div>Service</div>
+              <div>Blog</div>
+              <div>Contact</div>
+            </div>
+
+            <div className="h-1 w-1"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Part 1 */}
+      <div className="relative">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ ease: "linear" }}
+          className="absolute inset-0 flex justify-center items-center"
+        >
+          <div className="grid grid-flow-col justify-center">
+            <div className="grid grid-flow-row space-y-10 text-center p-16">
+              <div className="text-xl">WE ARE APPLICA</div>
+              <div className="text-5xl font-semibold">
+                World's Leading App Growth Partner
               </div>
-              <div className="h-1 w-1"></div>
+              <div className="grid grid-flow-col rounded-full bg-white m-96 p-2 items-center place-content-between">
+                <div className="text-gray-500 text-lg mt-2 ml-2 px-48 py-2">
+                  Type your app name or website
+                </div>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Image
+                    src="/icons/search.png"
+                    alt="Search"
+                    width={40}
+                    height={40}
+                  />
+                </motion.div>
+              </div>
+              <div className="font-light text-md">
+                We are solving the toughest problems for Best App Products
+              </div>
             </div>
           </div>
+        </motion.div>
+
+        <div>
+          <Image
+            src="/images/pg1.png"
+            alt="Background Image"
+            width={2000}
+            height={1500}
+            layout="responsive"
+          />
+        </div>
+      </div>
+
+      {/* Part 2 */}
+      <div className="container mx-auto">
+        <div className="grid-flow-col justify-center mt-24">
+          <Image
+            src="/images/pg2.png"
+            alt="Section Image"
+            width={2000}
+            height={2000}
+            layout="responsive"
+          />
+        </div>
+      </div>
+
+      {/* Part 3 */}
+      <div className="container mx-auto mt-28">
+        <div className="grid grid-flow-row space-y-8">
+          <div className="font-bold text-5xl grid grid-flow-col justify-start gap-3">
+            The Perfect solution for <span className="text-blue-700">CMOs</span>
+          </div>
+          <div className="text-xl">
+            Unlock Your Apps Potential with our data driven growth and best
+            industry Knowledge.
+          </div>
+        </div>
+        <div className="grid grid-flow-col justify-center mt-24">
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ ease: "linear" }}
-            className="absolute inset-0 flex justify-center items-center"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="rounded-2xl w-96 m-6 h-44 bg-white shadow-lg"
           >
-            <div className="grid grid-flow-col justify-center ">
-              <div className="grid grid-flow-row space-y-10 text-center p-16">
-                <div className="text-xl">WE ARE APPLICA</div>
-                <div className="text-5xl font-semibold ">
-                  Worlds Leading App Growth Partner
-                </div>
-                <div className="grid grid-flow-col rounded-full bg-white m-96 p-2 items-center place-content-between">
-                  <div className="text-gray-500 text-lg mt-2 ml-2 px-48 py-2">
-                    Type your app name or website
-                  </div>
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className=""
-                  >
-                    <Image
-                      src="/icons/search.png"
-                      alt=""
-                      className=" m-1"
-                      width={40}
-                      height={40}
-                    />
-                  </motion.div>
-                </div>
-                <div className="font-light text-md">
-                  {" "}
-                  We are solving the toughest problems for Best App Products
-                </div>
-              </div>
+            <div className="space-y-10 p-10">
+              <div className="text-blue-600 text-5xl font-bold">290</div>
+              <div className="text-lg">A/B tests conducted</div>
             </div>
           </motion.div>
-          <div>
-            <Image
-              src="/images/pg1.png"
-              alt=""
-              className=""
-              width={2000}
-              height={1500}
-            />
-          </div>
-        </div>
-
-        {/* part 2 */}
-        <div className=" container mx-auto">
-          <div className=" grid-flow-col justify-center mt-24">
-            <Image
-              src="/images/pg2.png"
-              alt=""
-              className=" "
-              width={2000}
-              height={2000}
-            />
-          </div>
-        </div>
-
-        {/* part 3 */}
-        <div className="container mx-auto mt-28">
-          <div className="grid grid-flow-row space-y-8">
-            <div className="font-bold text-5xl grid grid-flow-col justify-start gap-3">
-              The Perfect solution for{" "}
-              <div className="text-blue-700">CMOs </div>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="rounded-2xl w-auto m-6 h-44 bg-white shadow-lg"
+          >
+            <div className="space-y-10 p-10">
+              <div className="text-blue-600 text-5xl font-bold">26.4%</div>
+              <div className="text-lg">Average 1st-month Revenue growth</div>
             </div>
-            <div className="text-xl">
-              {" "}
-              Unlock Your Apps Potential with our data driven growth and best
-              industry Knowledge.
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="rounded-2xl w-96 m-6 h-44 bg-white shadow-lg"
+          >
+            <div className="space-y-10 p-10">
+              <div className="text-blue-600 text-5xl font-bold">68%</div>
+              <div className="text-lg">Success rate</div>
             </div>
-          </div>
-          <div className="grid grid-flow-col justify-center mt-24">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className=" rounded-2xl w-96 m-6 h-44 bg-white shadow-lg"
-            >
-              <div className="space-y-10 p-10">
-                <div className="text-blue-600 text-5xl font-bold">290</div>
-                <div className=" text-lg">A/B tests conducted</div>
-              </div>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className=" rounded-2xl w-auto m-6 h-44 bg-white shadow-lg"
-            >
-              <div className="space-y-10 p-10">
-                <div className="text-blue-600 text-5xl font-bold">26.4%</div>
-                <div className=" text-lg">Average 1st-month Revenue growth</div>
-              </div>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className=" rounded-2xl w-96 m-6 h-44 bg-white shadow-lg"
-            >
-              <div className="space-y-10 p-10">
-                <div className="text-blue-600 text-5xl font-bold">68%</div>
-                <div className=" text-lg">Sucess rate</div>
-              </div>
-            </motion.div>
-          </div>
-          <div className="grid grid-flow-col justify-center mt-4">
-            <motion.div
-              whileHover={{ scale: 1.2 }}
-              onHoverStart={(e) => {}}
-              onHoverEnd={(e) => {}}
-              whileTap={{ scale: 0.8 }}
-              className="  bg-blue-800 w-72 py-6 rounded-full shadow-xl  "
-            >
-              <div className="text-white text-center">
-                Explore Partnership Opportunities
-              </div>
-            </motion.div>
-          </div>
+          </motion.div>
         </div>
-        {/* part 4 */}
-
-        {/* part 5 */}
-        <div className="container mx-auto mt-28">
-          <div className="grid grid-flow-col justify-center">
-            <div className="font-bold text-5xl">Scale Your Business Easily</div>
-          </div>
+        <div className="grid grid-flow-col justify-center mt-4">
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            className="bg-blue-800 w-72 py-6 rounded-full shadow-xl"
+          >
+            <div className="text-white text-center">
+              Explore Partnership Opportunities
+            </div>
+          </motion.div>
         </div>
+      </div>
 
-        {/* part 6 */}
-        <div className="container mx-auto ">
+      {/* Part 4 */}
+      {/* Add content here */}
+
+      {/* Part 5 */}
+      <div className="container mx-auto mt-28">
+        <div className="grid grid-flow-col justify-center">
+          <div className="font-bold text-5xl">Scale Your Business Easily</div>
+        </div>
+      </div>
+
+      {/* Part 6 */}
+       {/* part 6 */}
+       <div className="container mx-auto ">
           <div className="grid grid-cols-3 gap-8">
             <motion.div
               whileHover={{ scale: 1.1 }}
@@ -393,8 +391,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* part 7 */}
-        <div className="container mx-auto mt-28">
+
+      {/* Part 7 */}
+      <div className="container mx-auto mt-28">
           <div className="grid grid-flow-row space-y-10">
             <div className="text-5xl font-bold">
               Grow your Products in five steps
@@ -579,126 +578,86 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* part 8 */}
-        <div className="container mx-auto">
-          <div className="font-bold text-5xl m-28 text-center">
-            Here is what our customers say
-          </div>
-          <div className="grid grid-cols-2 gap-8 ">
-            <div>
-              <Image
-                src="/images/testy1.png"
-                alt=""
-                className=""
-                width={800}
-                height={800}
-              />
-            </div>
-            <div>
-              <Image
-                src="/images/testy2.png"
-                alt=""
-                className=""
-                width={800}
-                height={800}
-              />
-            </div>
-            <div>
-              <Image
-                src="/images/testy3.png"
-                alt=""
-                className=""
-                width={800}
-                height={800}
-              />
-            </div>
-            <div>
-              <Image
-                src="/images/testy4.png"
-                alt=""
-                className=""
-                width={800}
-                height={800}
-              />
-            </div>
-          </div>
+      {/* Part 8 */}
+      <div className="container mx-auto">
+        <div className="font-bold text-5xl m-28 text-center">
+          Here is what our customers say
         </div>
-
-        {/* footer */}
-        <div className=" bg-blue-100 p-28 mt-28">
-          <div className="grid grid-flow-col justify-between">
-            {/* logo */}
-            <div className="grid grid-flow-row space-y-6">
-              <div className="">
+        <div className="grid grid-cols-2 gap-8">
+          {["testy1.png", "testy2.png", "testy3.png", "testy4.png"].map(
+            (img, index) => (
+              <div key={index}>
                 <Image
-                  src="/images/logo.png"
-                  alt=""
-                  className=""
-                  width={200}
-                  height={200}
+                  src={`/images/${img}`}
+                  alt={`Testimonial ${index + 1}`}
+                  width={800}
+                  height={800}
                 />
               </div>
-              <div className="grid grid-flow-col">
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <Image
-                    src="/icons/insta.png"
-                    alt=""
-                    className=""
-                    width={50}
-                    height={50}
-                  />
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <Image
-                    src="/icons/fb.png"
-                    alt=""
-                    className=""
-                    width={50}
-                    height={50}
-                  />
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <Image
-                    src="/icons/tweet.png"
-                    alt=""
-                    className=""
-                    width={50}
-                    height={50}
-                  />
-                </motion.div>
-              </div>
-            </div>
+            )
+          )}
+        </div>
+      </div>
 
-            <div className="grid grid-flow-row">
-              <div className=" font-semibold text-xl ">About</div>
-              <h1>Our guide</h1>
-              <h1>Blog</h1>
-              <h1>Contact Us</h1>
+      {/* Footer */}
+      <div className="bg-blue-100 p-28 mt-28">
+        <div className="grid grid-flow-col justify-between">
+          {/* Logo */}
+          <div className="grid grid-flow-row space-y-6">
+            <div>
+              <Image
+                src="/images/logo.png"
+                alt="Footer Logo"
+                width={200}
+                height={200}
+              />
             </div>
-            <div className="grid grid-flow-row">
-              <div className=" font-semibold text-xl ">Services</div>
-              <h1>Growth stratergy</h1>
-              <h1>Retention &amp; Engagement</h1>
-              <h1>Performance Marketing</h1>
-              <h1>App store Optimaization</h1>
-            </div>
-            <div className="grid grid-flow-row">
-              <div className=" font-semibold text-xl ">Others</div>
-              <h1>Site map</h1>
-              <h1>Terms &amp; conditions</h1>
-              <h1>Privacy Policy</h1>
+            <div className="grid grid-flow-col">
+              {["insta", "fb", "tweet"].map((icon, index) => (
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  key={index}
+                >
+                  <Image
+                    src={`/icons/${icon}.png`}
+                    alt={icon}
+                    width={50}
+                    height={50}
+                  />
+                </motion.div>
+              ))}
             </div>
           </div>
+
+          {/* Footer Links */}
+          {["About", "Services", "Others"].map((section, index) => (
+            <div key={index} className="grid grid-flow-row">
+              <div className="font-semibold text-xl">{section}</div>
+              {section === "About" && (
+                <>
+                  <h1>Our guide</h1>
+                  <h1>Blog</h1>
+                  <h1>Contact Us</h1>
+                </>
+              )}
+              {section === "Services" && (
+                <>
+                  <h1>Growth strategy</h1>
+                  <h1>Retention & Engagement</h1>
+                  <h1>Performance Marketing</h1>
+                  <h1>App store Optimization</h1>
+                </>
+              )}
+              {section === "Others" && (
+                <>
+                  <h1>Site map</h1>
+                  <h1>Terms & conditions</h1>
+                  <h1>Privacy Policy</h1>
+                </>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </main>
