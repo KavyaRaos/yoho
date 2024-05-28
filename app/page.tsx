@@ -52,8 +52,8 @@ export default function Home() {
               <div className="text-5xl font-semibold">
                 Worlds Leading App Growth Partner
               </div>
-              <div className="grid grid-flow-col rounded-full bg-white m-96 p-2 items-center place-content-between">
-                <div className="text-gray-500 text-lg mt-2 ml-2 px-48 py-2">
+              <div className="grid grid-flow-col rounded-full bg-white m-96 p-2 items-center  place-content-between">
+                <div className="text-gray-500 text-lg px-20">
                   Type your app name or website
                 </div>
                 <motion.div
