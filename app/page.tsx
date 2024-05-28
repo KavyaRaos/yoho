@@ -50,7 +50,7 @@ export default function Home() {
             <div className="grid grid-flow-row space-y-10 text-center p-16">
               <div className="text-xl">WE ARE APPLICA</div>
               <div className="text-5xl font-semibold">
-                World's Leading App Growth Partner
+                Worlds Leading App Growth Partner
               </div>
               <div className="grid grid-flow-col rounded-full bg-white m-96 p-2 items-center place-content-between">
                 <div className="text-gray-500 text-lg mt-2 ml-2 px-48 py-2">
