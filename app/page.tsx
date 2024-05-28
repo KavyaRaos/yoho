@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <div className="overflow-hidden body ">
       {/* Navbar */}
       <div className="relative">
         <div className="absolute inset-0">
@@ -33,14 +33,13 @@ export default function Home() {
               <div>Blog</div>
               <div>Contact</div>
             </div>
-
             <div className="h-1 w-1"></div>
           </div>
         </div>
       </div>
 
       {/* Part 1 */}
-      <div className="relative">
+      <div className="container mx-auto relative">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -166,7 +165,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Part 6 */}
        {/* part 6 */}
        <div className="container mx-auto ">
           <div className="grid grid-cols-3 gap-8">
@@ -600,7 +598,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <div className="bg-blue-100 p-28 mt-28">
+      <div className="bg-blue-100 p-28 mt-28 ft">
         <div className="grid grid-flow-col justify-between">
           {/* Logo */}
           <div className="grid grid-flow-row space-y-6">
@@ -660,6 +658,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-    </main>
+    </div>
   );
 }
