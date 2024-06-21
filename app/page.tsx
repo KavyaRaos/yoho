@@ -53,7 +53,7 @@ export default function Home() {
                 Worlds Leading App Growth Partner
               </div>
               <div className="grid grid-flow-col rounded-full bg-white m-96 p-2 items-center  place-content-between">
-                <div className="text-gray-500 text-lg px-20">
+                <div className="text-gray-500 text-lg p-10">
                   Type your app name or website
                 </div>
                 <motion.div
